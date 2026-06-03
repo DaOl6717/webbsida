@@ -20,39 +20,55 @@
         <header class="mb-12">
             <span class="text-xs font-mono uppercase tracking-widest text-amber-600 mb-2 block">Project Category</span>
             <h1 class="text-4xl font-semibold text-stone-900">MINTS</h1>
-            <p class="text-xl text-stone-500 mt-4 font-light">A modular integrated network of traffic sensors for collection and visualization of pollution data. 
+            <p class="text-xl text-stone-500 mt-4 font-light">A modular integrated network of traffic sensors for
+                collection and visualization of pollution data.
                 Developed together with my friends as a part of our bachelor's thesis at Uppsala Universitet.</p>
         </header>
 
-        <div class="flex flex-wrap gap-4">
-            <a href="https://github.com/TimSchonning/MINTS"
-                class="bg-stone-900 text-white px-6 py-2.5 rounded text-sm font-medium hover:bg-stone-800 shadow-sm">View
-                on GitHub</a>
+        <div class="flex flex-wrap gap-4 mb-12">
+            <a href="https://github.com/TimSchonning/MINTS" target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2.5 bg-stone-900 text-white px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-800 shadow-xs transition-all border border-transparent">
+                <i class="fa-brands fa-github text-base"></i>
+                <span>View on GitHub</span>
+            </a>
+
             <a href="https://www.diva-portal.org/smash/record.jsf?dswid=270&pid=diva2%3A2064597&c=1&searchType=SIMPLE&language=sv&query=david+olmedo&af=%5B%5D&aq=%5B%5B%5D%5D&aq2=%5B%5B%5D%5D&aqe=%5B%5D&noOfRows=50&sortOrder=author_sort_asc&sortOrder2=title_sort_asc&onlyFullText=false&sf=all"
-                class="bg-stone-900 text-white px-6 py-2.5 rounded text-sm font-medium hover:bg-stone-800 shadow-sm">Read the Thesis on DiVA</a>
+                target="_blank" rel="noopener noreferrer"
+                class="inline-flex items-center gap-2.5 bg-white text-stone-700 px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-stone-50 hover:text-stone-900 transition-all border border-stone-200 shadow-xs">
+                <i class="fa-solid fa-graduation-cap text-stone-400 group-hover:text-stone-600"></i>
+                <span>Read the Thesis on DiVA</span>
+            </a>
         </div>
 
-        <!-- Project Content -->
         <article class="prose prose-stone leading-relaxed space-y-6">
             <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">
                 <p>[Placeholder]</p>
             </div>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">The Challenge</h2>
-            <p>The core challenge of this project stems from the limitations of traditional urban pollution monitoring systems, which
-            are typically expensive, scarce, and mounted on high rooftops far from the ground-level areas where people actually
-            breathe. To address this, the project set out to design and test a denser, more affordable alternative using a
-            ground-level LoRa node-gateway network in Uppsala, Sweden. This required overcoming two primary hurdles: a technical
-            challenge to prove that low-power LoRa radio devices could maintain stable connectivity and range despite the heavy
-            structural obstructions of a dense urban environment, and a scientific challenge to capture and analyse simultaneous air
-            quality data to demonstrate exactly how much rooftop sensors underestimate the actual pollution
-            affecting people on the street.</p>
+            <p>The core challenge of this project stems from the limitations of traditional urban pollution monitoring
+                systems, which
+                are typically expensive, scarce, and mounted on high rooftops far from the ground-level areas where
+                people actually
+                breathe. To address this, the project set out to design and test a denser, more affordable alternative
+                using a
+                ground-level LoRa node-gateway network in Uppsala, Sweden. This required overcoming two primary hurdles:
+                a technical
+                challenge to prove that low-power LoRa radio devices could maintain stable connectivity and range
+                despite the heavy
+                structural obstructions of a dense urban environment, and a scientific challenge to capture and analyse
+                simultaneous air
+                quality data to demonstrate exactly how much rooftop sensors underestimate the actual pollution
+                affect people on the street.</p>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">Technical Details</h2>
-            <p>The MINTS project utilised low-power LoRa radio technology to establish a ground-level node-gateway network capable
-                of medium-to-long-range communication through urban obstructions. The system integrated specialised hardware sensors to
+            <p>The MINTS project utilised low-power LoRa radio technology to establish a ground-level node-gateway
+                network capable
+                of medium-to-long-range communication through urban obstructions. The system integrated specialised
+                hardware sensors to
                 simultaneously capture PM1 and PM2.5 particulate matter concentrations. The entire end-to-end
-                ecosystem was developed as an open-source project, with custom node and gateway firmware, custom communications protocol, a dedicated
+                ecosystem was developed as an open-source project, with custom node and gateway firmware, custom
+                communications protocol, a dedicated
                 backend database, and a frontend visualization interface.</p>
         </article>
     </main>
