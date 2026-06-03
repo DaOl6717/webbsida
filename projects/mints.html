@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINTS | David Olmedo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+    <nav class="max-w-4xl mx-auto px-4 py-8">
+        <a href="../index.html" class="text-stone-500 hover:text-stone-900 transition-colors text-sm font-mono">
+            <i class="fa-solid fa-arrow-left mr-2"></i> back to home
+        </a>
+    </nav>
+
+    <main class="max-w-3xl mx-auto px-4 pb-20">
+        <header class="mb-12">
+            <span class="text-xs font-mono uppercase tracking-widest text-amber-600 mb-2 block">Project Category</span>
+            <h1 class="text-4xl font-semibold text-stone-900">MINTS</h1>
+            <p class="text-xl text-stone-500 mt-4 font-light">A modular integrated network of traffic sensors for collection and visualization of pollution data. 
+                Developed together with my friends as a part of our bachelor's thesis at Uppsala Universitet.</p>
+        </header>
+
+        <!-- Project Content -->
+        <article class="prose prose-stone leading-relaxed space-y-6">
+            <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">
+                <p>[Placeholder]</p>
+            </div>
+
+            <h2 class="text-2xl font-medium text-stone-900 pt-4">The Challenge</h2>
+            <p>The core challenge of this project stems from the limitations of traditional urban pollution monitoring systems, which
+            are typically expensive, scarce, and mounted on high rooftops far from the ground-level areas where people actually
+            breathe. To address this, the project set out to design and test a denser, more affordable alternative using a
+            ground-level LoRa node-gateway network in Uppsala, Sweden. This required overcoming two primary hurdles: a technical
+            challenge to prove that low-power LoRa radio devices could maintain stable connectivity and range despite the heavy
+            structural obstructions of a dense urban environment, and a scientific challenge to capture and analyse simultaneous air
+            quality data to demonstrate exactly how much rooftop sensors underestimate the actual pollution
+            affecting people on the street.</p>
+
+            <h2 class="text-2xl font-medium text-stone-900 pt-4">Technical Details</h2>
+            <ul class="list-disc pl-5 space-y-2">
+                <li>The MINTS project utilised low-power LoRa radio technology to establish a ground-level node-gateway network capable
+                of medium-to-long-range communication through urban obstructions. The system integrated specialised hardware sensors to
+                simultaneously capture PM1 and PM2.5 particulate matter concentrations. The entire end-to-end
+                ecosystem was developed as an open-source project, with custom node and gateway firmware, custom communications protocol, a dedicated
+                backend database, and a frontend visualization interface.</li>
+            </ul>
+        </article>
+    </main>
+</body>
+
+</html>
