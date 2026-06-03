@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
-<body class="bg-stone-50 text-stone-800 font-sans antialiased">
+<body class="bg-stone-50 text-stone-800 font-sans antialiased relative">
     <nav class="max-w-5xl mx-auto px-4 py-8">
         <a href="../../index.html" class="text-stone-500 hover:text-stone-900 transition-colors text-sm font-mono">
             <i class="fa-solid fa-arrow-left mr-2"></i> back to home
@@ -21,35 +21,33 @@
             <span class="text-xs font-mono uppercase tracking-widest text-indigo-600 mb-2 block">Visual Media</span>
             <h1 class="text-4xl font-semibold text-stone-900">Photography</h1>
             <p class="text-xl text-stone-500 mt-4 font-light leading-relaxed">
-                I like taking photos of basically anything. My gear right now is a Fujifilm X-T20 combined with: Fujifilm XF 18-55mm f/2.8-4 R LM OIS, 
-                TTartisan AF35mm f/1.8, and Samyang 12mm f/2 NCS CS. Previously I shot with the Fujifilm X-A2 combined with the Fujifilm XC 16-50mm f/3.5-5.6 OIS II, but
-                they have since been sold.
+                Capturing raw landscapes, deep-sky astrophotography, and fine technical macro details. Driven by a
+                vintage aesthetic and manual glass.
             </p>
         </header>
 
-        <!-- Clean Imagery Grid Layout -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
 
-            <!-- Photo Item 1 -->
             <div class="flex flex-col space-y-3">
-                <div class="overflow-hidden rounded-xl bg-stone-200 border border-stone-200/60 shadow-xs group">
-                    <!-- Swap out the src attribute with your actual image path when ready, e.g., "../../assets/milkyway.jpg" -->
+                <div
+                    class="overflow-hidden rounded-xl bg-stone-200 border border-stone-200/60 shadow-xs group cursor-zoom-in">
                     <img src="https://encrypted-tbn2.gstatic.com/licensed-image?q=tbn:ANd9GcT5mfFdGHr3-3C3xfoy8-c_medl3JHB-YHTkXZ3t10B0EFwoOIgR021R8H-kHmVFbXbJD-d1OYGHClFXyo"
-                        alt="Milky Way over a dark landscape"
-                        class="w-full h-auto aspect-[4/3] object-cover filter grayscale hover:grayscale-0 transition-all duration-500 ease-out scale-100 group-hover:scale-102">
+                        alt="Milky Way over a dark landscape" onclick="openLightbox(this)"
+                        class="w-full h-auto aspect-[4/3] object-cover transition-all duration-500 ease-out scale-100 group-hover:scale-102">
                 </div>
                 <div class="px-1">
                     <h3 class="text-sm font-medium text-stone-900">The Core</h3>
-                    <p class="text-xs text-stone-500 font-mono mt-1">Fujifilm X-T20 • Samyang 12mm f/2.0 • Darktable</p>
+                    <p class="text-xs text-stone-500 font-mono mt-1">Fujifilm X-T20 • Samyang 12mm f/2.0 • Siril &
+                        Darktable</p>
                 </div>
             </div>
 
-            <!-- Photo Item 2 -->
             <div class="flex flex-col space-y-3">
-                <div class="overflow-hidden rounded-xl bg-stone-200 border border-stone-200/60 shadow-xs group">
+                <div
+                    class="overflow-hidden rounded-xl bg-stone-200 border border-stone-200/60 shadow-xs group cursor-zoom-in">
                     <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcSXOf96RuSOi4I2g7QRiLWDR4-kTjCA7cbzZv7MIh4SxBZHTrDvJUepINgUfCijRFALS0THYU_WaVoJ_L8"
-                        alt="Extreme macro detail shot of a vintage mechanical dial"
-                        class="w-full h-auto aspect-[4/3] object-cover filter grayscale hover:grayscale-0 transition-all duration-500 ease-out scale-100 group-hover:scale-102">
+                        alt="Extreme macro detail shot of a vintage mechanical dial" onclick="openLightbox(this)"
+                        class="w-full h-auto aspect-[4/3] object-cover transition-all duration-500 ease-out scale-100 group-hover:scale-102">
                 </div>
                 <div class="px-1">
                     <h3 class="text-sm font-medium text-stone-900">Mechanical Textures</h3>
@@ -58,7 +56,6 @@
                 </div>
             </div>
 
-            <!-- Photo Item 3 -->
             <div class="flex flex-col space-y-3">
                 <div
                     class="overflow-hidden rounded-xl bg-stone-200 aspect-[4/3] border border-stone-200/60 shadow-xs flex items-center justify-center text-stone-400 font-mono text-xs">
@@ -70,7 +67,6 @@
                 </div>
             </div>
 
-            <!-- Photo Item 4 -->
             <div class="flex flex-col space-y-3">
                 <div
                     class="overflow-hidden rounded-xl bg-stone-200 aspect-[4/3] border border-stone-200/60 shadow-xs flex items-center justify-center text-stone-400 font-mono text-xs">
@@ -84,6 +80,44 @@
 
         </div>
     </main>
+
+    <div id="lightbox" onclick="closeLightbox()"
+        class="hidden fixed inset-0 bg-stone-950/90 z-50 flex items-center justify-center p-4 backdrop-blur-sm cursor-zoom-out transition-all duration-300 opacity-0">
+        <img id="lightbox-img" src="" alt="Enlarged view"
+            class="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain transition-transform duration-300 scale-95">
+    </div>
+
+    <script>
+        function openLightbox(element) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            // Set clicked image source into backdrop display target
+            lightboxImg.src = element.src;
+
+            // Reveal element structure and animate smoothly
+            lightbox.classList.remove('hidden');
+            setTimeout(() => {
+                lightbox.classList.remove('opacity-0');
+                lightboxImg.classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+
+            // Reverse fade animation smoothly
+            lightbox.classList.add('opacity-0');
+            lightboxImg.classList.add('scale-95');
+
+            // Clean up node presentation after transition finishes
+            setTimeout(() => {
+                lightbox.classList.add('hidden');
+                lightboxImg.src = '';
+            }, 300);
+        }
+    </script>
 </body>
 
 </html>
