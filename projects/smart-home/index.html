@@ -24,14 +24,35 @@
             <p class="text-xl text-stone-500 mt-4 font-light">My self hosted smart home setup with Home Assistant as the core.</p>
         </header>
 
+        <!-- Project progress bar -->
+        <div class="mb-12">
+            <div class="flex justify-between text-sm font-mono text-stone-500 mb-2">
+                <span>Project progress</span>
+                <span>90%</span>
+            </div>
+            <div class="w-full h-3 bg-stone-200 rounded-full overflow-hidden"
+                 role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"
+                 aria-label="Project progress">
+                <div class="h-full bg-amber-600 rounded-full transition-all duration-500" style="width: 90%"></div>
+            </div>
+        </div>
+
         <article class="prose prose-stone leading-relaxed space-y-6">
             <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">
                 <p>[Placeholder]</p>
             </div>
 
+            <h2 class="text-2xl font-medium text-stone-900 pt-4">Current Status</h2>
+            <p>
+                I am not really working on developing this project anymore, mostly spending time on upkeep. The main features, the dashboard, and the automations are set up as I want them to be.
+                If I find time, I might implement a way to turn on/off the home server either upon request or through some automation. E.g automatically 
+                turn it off during the night, and starting it again during the early morning to save on my electricity bill. I would also like to get a new device to host my wall mounted dashboard,
+                but the current (really old) iPad works good enough for now. Finally, some other upcoming projects might tie in to this ecosystem.
+            </p>
+
             <h2 class="text-2xl font-medium text-stone-900 pt-4">Technical Details</h2>
             <p>Several Matter connected sensors and lights, together with WiFi connected devices like a wall mounted iPad functioning as the dashboard. Together, they enable
-                different automations, desktop work and gaming away from home, and enable other opportunities for self hosting.
+                different automations, self hosted DNS Server to block ads, desktop work and gaming away from home, and enable other opportunities for self hosting that does not fit on the home lab.
             </p>
         </article>
     </main>

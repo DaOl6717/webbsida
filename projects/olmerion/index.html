@@ -23,6 +23,19 @@
             <p class="text-xl text-stone-500 mt-4 font-light">Kort summering</p>
         </header>
 
+        <!-- Project progress bar -->
+        <div class="mb-12">
+            <div class="flex justify-between text-sm font-mono text-stone-500 mb-2">
+                <span>Project progress</span>
+                <span>10%</span>
+            </div>
+            <div class="w-full h-3 bg-stone-200 rounded-full overflow-hidden"
+                 role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"
+                 aria-label="Project progress">
+                <div class="h-full bg-green-600 rounded-full transition-all duration-500" style="width: 10%"></div>
+            </div>
+        </div>
+
         <!-- Project Content -->
         <article class="prose prose-stone leading-relaxed space-y-6">
             <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">

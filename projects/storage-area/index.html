@@ -22,9 +22,21 @@
             <h1 class="text-4xl font-semibold text-stone-900">Storage Area</h1>
             <p class="text-xl text-stone-500 mt-4 font-light">A food stock management system built using an old Raspberry Pi and a barcode scanner. 
                 Connected to Home Assistant which enables displaying information on the HA dashboard at home, and automated shopping lists on my phone.
-            This project is nearly done, but during testing, I noticed that I didn't use it that much. The system has since brought offline and the Raspberry
-         is repurposed for image recognition in another upcoming project.</p>
+            </p>
         </header>
+
+        <!-- Project progress bar -->
+        <div class="mb-12">
+            <div class="flex justify-between text-sm font-mono text-stone-500 mb-2">
+                <span>Project progress</span>
+                <span>99%</span>
+            </div>
+            <div class="w-full h-3 bg-stone-200 rounded-full overflow-hidden"
+                 role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"
+                 aria-label="Project progress">
+                <div class="h-full bg-green-600 rounded-full transition-all duration-500" style="width: 99%"></div>
+            </div>
+        </div>
 
         <div class="flex flex-wrap gap-4 mb-12">
             <a href="https://github.com/DaOl6717/storage_area" target="_blank" rel="noopener noreferrer"
@@ -36,7 +48,7 @@
 
         <article class="prose prose-stone leading-relaxed space-y-6">
             <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">
-                <p>[Placeholder]</p>
+                <img src="../../images/storage_area.png" alt="Projektcykel thumbnail" class="w-full h-full object-cover">
             </div>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">The Challenge</h2>
@@ -45,9 +57,13 @@
             had in stock and when it expired, which became the start of this project.</p>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">Technical Details</h2>
-            <p>An old Raspberry Pi 2 model B running running linux. Connected to it is an incompatible (but working) display for text input, a USB WiFi module and a barcode scanner.
+            <p>An old Raspberry Pi 2 model B running running Debian. Connected to it is an technically incompatible (but working) display for text input, a USB WiFi module and a barcode scanner.
                 Through WiFi, it can locally connect to Home Assistant, which runs a MariaDB SQL database, storing information about the stored food. The information
                 is then displayed on the Home Assistant dashboard.</p>
+
+            <h2 class="text-2xl font-medium text-stone-900 pt-4">Current Status</h2>
+            <p>This project is nearly finished, but during a testing phase of a few weeks, I noticed that I didn't use it that much. 
+                The system has since been brought offline and will not be worked on anymore, but a fun and educational project nonetheless.</p>
         </article>
     </main>
 </body>

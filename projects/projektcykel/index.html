@@ -22,21 +22,36 @@
                 Hardware</span>
             <h1 class="text-4xl font-semibold text-stone-900">Projektcykel</h1>
             <p class="text-xl text-stone-500 mt-4 font-light">"Projektcykel" or "Project Bike" in swedish, is a restoration and development project started in 2023 together with a friend.
-                There isn't really a set out goal, we just want to add as much tech as possible to the bike.
+                There isn't really a set out goal, we just want to add as much tech as possible to a bike we bought second hand.
             </p>
         </header>
 
+        <!-- Project progress bar -->
+        <div class="mb-12">
+            <div class="flex justify-between text-sm font-mono text-stone-500 mb-2">
+                <span>Project progress</span>
+                <span>8%</span>
+            </div>
+            <div class="w-full h-3 bg-stone-200 rounded-full overflow-hidden"
+                 role="progressbar" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"
+                 aria-label="Project progress">
+                <div class="h-full bg-amber-600 rounded-full transition-all duration-500" style="width: 8%"></div>
+            </div>
+        </div>
+
         <article class="prose prose-stone leading-relaxed space-y-6">
             <div class="aspect-video bg-stone-200 rounded-xl mb-8 flex items-center justify-center text-stone-400">
-                <p>[Placeholder]</p>
+                <img src="../../images/projektcykel.JPG" alt="Projektcykel thumbnail" class="w-full h-full object-cover">
             </div>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">The Challenge</h2>
-            <p>Restoring the bike, understanding embedded systems, programming sensors, etc. There's a lot of challenges in this project, but the biggest one is probably
-                finding the time to work on it...</p>
+            <p>Restoring the bike, understanding embedded systems, programming sensors, etc. There's a lot of challenges to unpack with this project, 
+                but the biggest one is probably finding the time to work on it...</p>
 
             <h2 class="text-2xl font-medium text-stone-900 pt-4">Technical Details</h2>
-            <p>Currently it consists of a bike, an Arduino Nano and a hall effect sensor. There isn't really much to it as of right now.</p>
+            <p>Currently it consists of the bike, paired with an Arduino Nano, hall effect sensor and a Bluetooth connection to send velocity data to an Android phone.
+                Compared to GPS data, the speedometer seems quite accurate.
+            </p>
         </article>
     </main>
 </body>
