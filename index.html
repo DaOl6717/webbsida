@@ -20,6 +20,19 @@
         .portfolio-item:hover {
             transform: translateY(-4px);
         }
+
+        .ticker-track {
+            animation: ticker 40s linear infinite;
+        }
+
+        .ticker-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes ticker {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 
@@ -30,9 +43,17 @@
             <a href="index.html" class="font-mono tracking-tight text-lg font-bold">https://olmedo.se/</a>
             <div class="flex gap-6 font-medium text-sm text-stone-600">
                 <a href="about/index.html" class="hover:text-stone-900 transition-colors">About</a>
+                <a href="roadmap/index.html" class="hover:text-stone-900 transition-colors">Roadmap</a>
             </div>
         </div>
     </nav>
+
+    <div class="fixed top-16 left-0 right-0 z-40 bg-stone-900 text-stone-100 text-sm h-10 flex items-center overflow-hidden">
+        <span class="shrink-0 h-full flex items-center px-4 font-mono text-xs uppercase text-amber-400 bg-stone-900 z-10">Current status:</span>
+        <div class="overflow-hidden flex-1">
+            <div id="ticker-track" class="ticker-track flex whitespace-nowrap"></div>
+        </div>
+    </div>
 
     <header class="pt-32 pb-20 px-4 max-w-4xl mx-auto md:pt-40 md:pb-28">
         <h1 class="text-4xl md:text-6xl font-light tracking-tight text-stone-900 mb-4">
@@ -64,7 +85,7 @@
                 <!-- Projektcykel -->
                 <a href="projects/projektcykel/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/projektcykel.JPG" alt="MINTS project thumbnail" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -78,7 +99,7 @@
                 <!-- Stargazer -->
                 <a href="projects/stargazer/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/stargazer.jpg" alt="Stargazer project thumbnail" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -92,7 +113,7 @@
                 <!-- Photography -->
                 <a href="projects/photography/"
                     class="portfolio-item photo flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/photography.jpg" alt="Photography thumbnail" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
@@ -139,7 +160,7 @@
                     <div class="p-6">
                         <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Embedded systems</span>
                         <h3 class="text-lg font-medium text-stone-900">DoorPhone</h3>
-                        <p class="text-stone-600 text-sm mt-2">Enabeling me to answer my door phone from everywhere.</p>
+                        <p class="text-stone-600 text-sm mt-2">Enabling me to answer my door phone from everywhere.</p>
                     </div>
                 </a>
 
@@ -160,7 +181,7 @@
         </div>
     </section>
 
-        <section id="work" class="py-20 bg-white border-y border-stone-200">
+    <section id="discontinued" class="py-20 bg-white border-y border-stone-200">
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
@@ -182,7 +203,7 @@
                 <!-- MINTS -->
                 <a href="projects/MINTS/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/MINTS.jpg"
                         alt="MINTS project thumbnail"
                         class="w-full h-full object-cover"
@@ -199,7 +220,7 @@
                 <!-- SACSAB -->
                 <a href="projects/SACSAB/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/sacsab_logo.png" 
                         alt="SACSAB thumbnail" 
                         class="w-full h-full object-cover"
@@ -229,7 +250,7 @@
                 <!-- Storage Area -->
                 <a href="projects/storage-area/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
+                    <div class="aspect-video overflow-hidden">
                         <img src="images/storage_area.png" 
                         alt="Storage area thumbnail" 
                         class="w-full h-full object-cover"
@@ -248,6 +269,22 @@
     </section>
 
     <!-- Footer -->
+
+    <script>
+        const tinkering = [
+            "3D printing electronics encasing for projektcykel",
+            "Designing wing parts for 3Drone",
+            "setting up new self-hosted services",
+            "Preparing to print 3Drone's tail",
+            "Ordering parts for DoorPhone"
+        ];
+
+        const track = document.getElementById("ticker-track");
+        const items = tinkering
+            .map(t => `<span class="px-6">${t}</span><span class="text-amber-400">•</span>`)
+            .join("");
+        track.innerHTML = items + items;
+    </script>
 
     <script>
         function filterSelection(category) {
