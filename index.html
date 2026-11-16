@@ -55,50 +55,12 @@
         <div class="max-w-6xl mx-auto px-4">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
                 <div>
-                    <h2 class="text-2xl font-semibold tracking-tight text-stone-900 mb-2">Selected Work</h2>
-                    <p class="text-stone-500 text-sm">Engineering, software, and media.</p>
-                </div>
-                <div class="flex flex-wrap gap-2 text-sm">
-                    <button onclick="filterSelection('all')"
-                        class="filter-btn active px-4 py-1.5 rounded-full bg-stone-900 text-white font-medium cursor-pointer">All</button>
-                    <button onclick="filterSelection('tech')"
-                        class="filter-btn px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 hover:bg-stone-200 cursor-pointer">Tech</button>
-                    <button onclick="filterSelection('media')"
-                        class="filter-btn px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 hover:bg-stone-200 cursor-pointer">Media</button>
+                    <h2 class="text-2xl font-semibold tracking-tight text-stone-900 mb-2">Current Projects</h2>
+                    <p class="text-stone-500 text-sm">Current projects that interest me, either work-in-progress or maintained.</p>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
-
-                <!-- MINTS -->
-                <a href="projects/MINTS/"
-                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
-                        <img src="images/MINTS.jpg"
-                        alt="MINTS project thumbnail"
-                        class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Bachelors Thesis</span>
-                        <h3 class="text-lg font-medium text-stone-900">MINTS</h3>
-                        <p class="text-stone-600 text-sm mt-2">Modular network of traffic sensors for urban pollution
-                            monitoring.</p>
-                    </div>
-                </a>
-
-                <!-- SACSAB -->
-                <a href="projects/SACSAB/"
-                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video overflow-hiden">
-                        <img src="images/sacsab_logo.png" alt="SACSAB thumbnail" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Company</span>
-                        <h3 class="text-lg font-medium text-stone-900">SACSAB</h3>
-                        <p class="text-stone-600 text-sm mt-2">My company. Building modern defense systems against UAVs.</p>
-                    </div>
-                </a>
-
                 <!-- Projektcykel -->
                 <a href="projects/projektcykel/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
@@ -106,7 +68,7 @@
                         <img src="images/projektcykel.JPG" alt="MINTS project thumbnail" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Hardware (WIP)</span>
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Embedded Systems</span>
                         <h3 class="text-lg font-medium text-stone-900">Projektcykel</h3>
                         <p class="text-stone-600 text-sm mt-2">Restoring an old bike with custom-designed electronics.
                         </p>
@@ -120,7 +82,7 @@
                         <img src="images/stargazer.jpg" alt="Stargazer project thumbnail" class="w-full h-full object-cover">
                     </div>
                     <div class="p-6">
-                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Software (WIP)</span>
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Software</span>
                         <h3 class="text-lg font-medium text-stone-900">Stargazer</h3>
                         <p class="text-stone-600 text-sm mt-2">Using machine learning to find the optimal settings for Fujifilm RAW astrophotography
                             photos.</p>
@@ -141,19 +103,6 @@
                     </div>
                 </a>
 
-<!--                 Olmerion
-                <a href="https://www.instagram.com/olmerion/" target="_blank"
-                    class="portfolio-item photo flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
-                    <div class="aspect-video bg-stone-200 flex items-center justify-center text-stone-400">
-                        <i class="fa-brands fa-instagram text-4xl"></i>
-                    </div>
-                    <div class="p-6">
-                        <span class="text-xs font-mono uppercase text-indigo-600 mb-2 block">Content</span>
-                        <h3 class="text-lg font-medium text-stone-900">Olmerion</h3>
-                        <p class="text-stone-600 text-sm mt-2">Fun video documentation of various of my engineering projects.</p>
-                    </div>
-                </a>
- -->
                 <!-- Smart Home -->
                 <a href="projects/smart-home/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
@@ -180,12 +129,111 @@
                         <p class="text-stone-600 text-sm mt-2">Hosting my own digital services to reduce reliance on big tech. Also a kind of home lab.</p>
                     </div>
                 </a>
+
+                <!-- DoorPhone -->
+                <a href="projects/DoorPhone/"
+                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
+                    <div class="aspect-video bg-stone-200 flex items-center justify-center text-stone-400">
+                        <i class="fa-solid fa-phone text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Embedded systems</span>
+                        <h3 class="text-lg font-medium text-stone-900">DoorPhone</h3>
+                        <p class="text-stone-600 text-sm mt-2">Enabeling me to answer my door phone from everywhere.</p>
+                    </div>
+                </a>
+
+                <!-- 3Drone -->
+                <a href="projects/3Drone/"
+                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
+                    <div class="aspect-video bg-stone-200 flex items-center justify-center text-stone-400">
+                        <i class="fa-solid fa-plane text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Embedded Systems</span>
+                        <h3 class="text-lg font-medium text-stone-900">3Drone</h3>
+                        <p class="text-stone-600 text-sm mt-2">Designing and 3D printing a fixed-wing drone from scratch.</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+        <section id="work" class="py-20 bg-white border-y border-stone-200">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <h2 class="text-2xl font-semibold tracking-tight text-stone-900 mb-2">Discontinued Projects</h2>
+                    <p class="text-stone-500 text-sm">Projects I am not working on anymore. Some might be revived again.</p>
+                </div>
+                <div class="flex flex-wrap gap-2 text-sm">
+                    <button onclick="filterSelection('all')"
+                        class="filter-btn active px-4 py-1.5 rounded-full bg-stone-900 text-white font-medium cursor-pointer">All</button>
+                    <button onclick="filterSelection('tech')"
+                        class="filter-btn px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 hover:bg-stone-200 cursor-pointer">Tech</button>
+                    <button onclick="filterSelection('media')"
+                        class="filter-btn px-4 py-1.5 rounded-full bg-stone-100 text-stone-600 hover:bg-stone-200 cursor-pointer">Media</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+
+                <!-- MINTS -->
+                <a href="projects/MINTS/"
+                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
+                    <div class="aspect-video overflow-hiden">
+                        <img src="images/MINTS.jpg"
+                        alt="MINTS project thumbnail"
+                        class="w-full h-full object-cover"
+                        style="filter: grayscale(100%);">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Bachelors Thesis</span>
+                        <h3 class="text-lg font-medium text-stone-900">MINTS</h3>
+                        <p class="text-stone-600 text-sm mt-2">Modular network of traffic sensors for urban pollution
+                            monitoring.</p>
+                    </div>
+                </a>
+
+                <!-- SACSAB -->
+                <a href="projects/SACSAB/"
+                    class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
+                    <div class="aspect-video overflow-hiden">
+                        <img src="images/sacsab_logo.png" 
+                        alt="SACSAB thumbnail" 
+                        class="w-full h-full object-cover"
+                        style="filter: grayscale(100%);">
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Company</span>
+                        <h3 class="text-lg font-medium text-stone-900">SACSAB</h3>
+                        <p class="text-stone-600 text-sm mt-2">My company. The aim was to build modern defense systems against UAVs.</p>
+                    </div>
+                </a>
+
+<!--                 Olmerion
+                <a href="https://www.instagram.com/olmerion/" target="_blank"
+                    class="portfolio-item photo flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
+                    <div class="aspect-video bg-stone-200 flex items-center justify-center text-stone-400">
+                        <i class="fa-brands fa-instagram text-4xl"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-mono uppercase text-indigo-600 mb-2 block">Content</span>
+                        <h3 class="text-lg font-medium text-stone-900">Olmerion</h3>
+                        <p class="text-stone-600 text-sm mt-2">Fun video documentation of various of my engineering projects.</p>
+                    </div>
+                </a>
+ -->
                 
                 <!-- Storage Area -->
                 <a href="projects/storage-area/"
                     class="portfolio-item tech flex flex-col bg-stone-50 rounded-xl overflow-hidden border border-stone-200/60 shadow-xs">
                     <div class="aspect-video overflow-hiden">
-                        <img src="images/storage_area.png" alt="Storage area thumbnail" class="w-full h-full object-cover">
+                        <img src="images/storage_area.png" 
+                        alt="Storage area thumbnail" 
+                        class="w-full h-full object-cover"
+                        style="filter: grayscale(100%);">
                     </div>
                     <div class="p-6">
                         <span class="text-xs font-mono uppercase text-amber-600 mb-2 block">Software Systems</span>
