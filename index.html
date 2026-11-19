@@ -22,16 +22,25 @@
         }
 
         .ticker-track {
-            animation: ticker 40s linear infinite;
+            display: flex;
+            width: max-content;
+            flex-shrink: 0;
+            white-space: nowrap;
+            will-change: transform;
+            animation: ticker 20s linear infinite;
         }
-
+        
         .ticker-track:hover {
             animation-play-state: paused;
         }
 
         @keyframes ticker {
-            from { transform: translateX(0); }
-            to { transform: translateX(-50%); }
+            from {
+                transform: translate3d(0, 0, 0);
+            }
+            to {
+                transform: translate3d(var(--ticker-distance), 0, 0);
+            }
         }
     </style>
 </head>
@@ -51,7 +60,7 @@
     <div class="fixed top-16 left-0 right-0 z-40 bg-stone-900 text-stone-100 text-sm h-10 flex items-center overflow-hidden">
         <span class="shrink-0 h-full flex items-center px-4 font-mono text-xs uppercase text-amber-400 bg-stone-900 z-10">Current status:</span>
         <div class="overflow-hidden flex-1">
-            <div id="ticker-track" class="ticker-track flex whitespace-nowrap"></div>
+            <div id="ticker-track" class="ticker-track"></div>
         </div>
     </div>
 
@@ -272,18 +281,36 @@
 
     <script>
         const tinkering = [
-            "3D printing electronics encasing for projektcykel",
-            "Designing wing parts for 3Drone",
-            "setting up new self-hosted services",
-            "Preparing to print 3Drone's tail",
-            "Ordering parts for DoorPhone"
-        ];
+                "3D printing electronics encasing for Projektcykel",
+                "Designing wing parts for 3Drone",
+                "Setting up new self-hosted services",
+                "Preparing to print 3Drone's tail",
+                "Ordering parts for DoorPhone"
+            ];
 
-        const track = document.getElementById("ticker-track");
-        const items = tinkering
-            .map(t => `<span class="px-6">${t}</span><span class="text-amber-400">•</span>`)
-            .join("");
-        track.innerHTML = items + items;
+            const track = document.getElementById("ticker-track");
+
+            function createTickerContent() {
+                return tinkering
+                    .map(item => `
+            <span class="px-6 shrink-0">${item}</span>
+            <span class="text-amber-400 px-2 shrink-0">•</span>
+                    `)
+                    .join('');
+            }
+
+            track.innerHTML =
+                createTickerContent() +
+                createTickerContent();
+
+            requestAnimationFrame(() => {
+                const distance = track.scrollWidth / 2;
+
+                document.documentElement.style.setProperty(
+                    '--ticker-distance',
+                    `-${distance}px`
+                );
+            });
     </script>
 
     <script>
